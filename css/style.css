@@ -1,0 +1,366 @@
+@charset "UTF-8";
+
+/*-------------------------
+  初期値
+-------------------------*/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+  color: #333;
+  font-size: 1.6rem;
+  line-height: 2;
+  font-feature-settings: "palt";
+  text-size-adjust: 100%;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+a {
+  text-decoration: none;
+  letter-spacing: 0.15em;
+}
+
+:hover {
+  transition: 0.4s ease-in;
+}
+
+em {
+  font-style: normal;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*-------------------------
+  グローバル
+-------------------------*/
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.gl-header {
+  height: 82px;
+  padding-top: 30px;
+  background-color: #343a40;
+}
+
+@media screen and (max-width: 768px) {
+  .gl-header {
+    height: auto;
+    padding-top: 25px;
+  }
+}
+
+.logo {
+  width: 154px;
+  height: 25px;
+  background: #343a40 url("../images/logo.jpg") 0 0 / contain no-repeat;
+  float: left;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 45%;
+    margin: auto;
+    height: 35px;
+    padding: 0;
+    background: #343a40 url("../images/logo.jpg") 0 0 / contain no-repeat;
+    float: none;
+  }
+}
+
+.logo a {
+  display: block;
+  width: 154px;
+  height: 25px;
+  text-indent: -9999px;
+  float: none;
+}
+
+@media screen and (max-width: 768px) {
+  .logo a {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.gl-nav {
+  margin-left: 42px;
+}
+
+@media screen and (max-width: 768px) {
+  .gl-nav {
+    margin-left: 0px;
+  }
+}
+
+nav.gl-nav ul li a {
+  float: left;
+  color: #d4d3d3;
+  line-height: 1;
+  padding-top: 5px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .gl-nav ul {
+    display: table;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gl-nav li {
+    float: left;
+    padding: 0 0 15px 0;
+  }
+}
+
+nav.gl-nav ul li:nth-last-of-type(1) a {
+  padding-left: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .gl-nav li:nth-of-type(1) {
+    padding-right: 15px;
+  }
+}
+
+nav.gl-nav ul li:nth-last-of-type(2) a {
+  padding-left: 42px;
+}
+
+@media screen and (max-width: 768px) {
+  nav.gl-nav ul li:nth-last-of-type(1) a,
+  nav.gl-nav ul li:nth-last-of-type(2) a {
+    padding-left: 0;
+  }
+}
+
+.gl-footer {
+  height: 176px;
+  background: #343a40;
+  padding-top: 50px;
+}
+
+.gl-footer small a {
+  font-size: 16px;
+  line-height: 2;
+}
+
+/*-------------------------
+  メイン画
+-------------------------*/
+.top-hero {
+  text-indent: -9999px;
+  height: 400px;
+  background: #343a40 url("../images/mainimg.jpg") center center / cover
+    no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .top-hero {
+    width: 100%;
+    height: 560px;
+    margin: 0 auto;
+    background: url("../images/main_sp.jpg") center center / cover no-repeat;
+  }
+}
+
+/*-------------------------
+  トピックス
+-------------------------*/
+section.top-topics ul {
+  padding-top: 40px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+section.top-topics ul li {
+  width: 350px;
+  float: left;
+}
+
+@media screen and (max-width: 768px) {
+  section.top-topics ul li {
+    margin-bottom: 30px;
+  }
+}
+
+section.top-topics ul li ~ li {
+  margin-left: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  section.top-topics ul li ~ li {
+    margin-left: 0;
+  }
+}
+
+section.top-topics ul li img {
+  height: 210px;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  section.top-topics ul li img {
+    height: auto;
+    width: 80%;
+  }
+}
+
+section.top-topics ul li h2 {
+  font-size: 31px;
+  padding-bottom: 20px;
+  color: #e85000;
+  /* word-break: break-all; */
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  section.top-topics ul li h2 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+}
+
+section.top-topics ul li p {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  padding-bottom: 10px;
+  width: 350px;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 768px) {
+  section.top-topics ul li p {
+    text-align: justify;
+    word-break: normal;
+  }
+}
+
+section.top-topics ul li a {
+  display: block;
+  width: 60px;
+  height: 40px;
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 10px 3px;
+  float: left;
+  border-radius: 5px;
+}
+
+section.top-topics ul li a:nth-of-type(1) {
+  margin-right: 8px;
+  background: #cc4902;
+  color: white;
+}
+section.top-topics ul li a:nth-of-type(2) {
+  background: #f0b912;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  section.top-topics ul li a:nth-of-type(1),
+  section.top-topics ul li a:nth-of-type(2) {
+    font-weight: bold;
+  }
+}
+
+/*-------------------------
+  バナー
+-------------------------*/
+
+aside.top-banner {
+  content: "";
+  display: block;
+  clear: both;
+}
+aside.top-banner ul {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  aside.top-banner ul {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+}
+
+aside.top-banner ul li img {
+  width: 255px;
+  height: 133px;
+}
+
+@media screen and (max-width: 768px) {
+  aside.top-banner ul li {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  aside.top-banner ul li img {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+  }
+}
+
+/*-------------------------
+  フッター
+-------------------------*/
+.gl-footer p {
+  color: #888;
+}
+@media screen and (max-width: 768px) {
+  .gl-footer {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    padding-right: 25px;
+    text-align: justify;
+  }
+}
+.gl-footer p span {
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .gl-footer p {
+    font-size: 11px;
+  }
+}
